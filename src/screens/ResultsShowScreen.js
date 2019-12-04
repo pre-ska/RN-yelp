@@ -18,8 +18,8 @@ const ResultsShowScreen = ({ navigation }) => {
   if (!result) return null;
 
   return (
-    <View>
-      <Text>{result.name}</Text>
+    <View style={styles.container}>
+      <Text style={styles.textStyle}>{result.name}</Text>
       <FlatList
         keyExtractor={photo => photo}
         data={result.photos}
@@ -34,8 +34,19 @@ const ResultsShowScreen = ({ navigation }) => {
 export default ResultsShowScreen;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  textStyle: {
+    fontWeight: "bold",
+    fontSize: 16
+  },
   imageStyle: {
-    height: 200,
-    width: 300
+    height: 150,
+    width: 250,
+    borderRadius: 10,
+    marginVertical: 10
   }
 });

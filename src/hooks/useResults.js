@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import yelp from "../api/yelp";
 
-export default () => {
+export default city => {
+  console.log(city);
   const [results, setResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
